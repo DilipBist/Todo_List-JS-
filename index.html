@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List/JavaScript</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%);
+            background-color: orange;
+            padding: 20px 10px;
+            border-radius: 5px;
+            width: 50%;
+        }
+
+        .input_container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .input_container input {
+            width: 100%;
+            padding: 10px 5px;
+            border: none;
+            border-radius: 2px;
+        }
+
+        #date {
+            width: 25%;
+            padding: 8px 5px;
+        }
+
+        .input_container button {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .list {
+            background-color: white;
+            padding: 5px;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: capitalize;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            /* justify-content: center; */
+            flex-wrap: wrap;
+        }
+
+        .list button {
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-weight: bolder;
+            padding: 5px 0;
+        }
+
+        @media (max-width: 1000px) {
+            .container {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                width: 100%;
+                border-radius: 0;
+            }
+
+            .input_container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            #date {
+                width: 40%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <div class="input_container">
+            <input type="text" id="input_data" placeholder="Enter the todo">
+            <input type="date" id="date">
+            <button class="add_btn" onclick="addTodo()">Add</button>
+        </div>
+        <div class="show_todo_list">
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
